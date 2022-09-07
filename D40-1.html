@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./animate/node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="./bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./Fontawesome/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .carousel-item img{
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="my-5 w-75 m-auto border border-primary d-flex justify-content-between align-items-center">
+        <a class="nav-item">NavBar</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+    </div>
+
+
+    <div class="d-flex align-items-center my-5 m-auto border border-dark w-75">
+            <buttton class="btn btn-primary border" style="margin: -20px;z-index: 2" id="prev"><i class="fa fa-arrow-left"></i></buttton>
+        <div class="container-fluid p-0" >
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div id="photoSlide" class="carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/andras-vas-Bd7gNnWJBkU-unsplash.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/bench-accounting-C3V88BOoRoM-unsplash.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/christian-wiediger-WkfDrhxDMC8-unsplash.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="textSlide" class="carousel-slide" data-bs-ride="carousel">
+                        <div class="carousel-inner text-center p-5">
+                            <div class="carousel-item">
+                                <div>
+                                    <h1>Title One</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item active">
+                                <div>
+                                    <h1>Title Two</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div>
+                                    <h1>Title Three</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis incidunt obcaecati praesentium sequi sunt?
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <buttton class="btn btn-primary border" style="margin: -20px"  id="next"><i class="fa fa-arrow-right"></i></buttton>
+
+    </div>
+
+
+
+
+
+    <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+        // let photoSlite = document.getElementById("photoSlide")
+        // const slide = new bootstrap.Carousel(photoSlite);
+
+        const photoSlite = new bootstrap.Carousel('#photoSlide');
+        const textSlite = new bootstrap.Carousel('#textSlide');
+
+        document.getElementById("next").addEventListener("click",function(){
+            photoSlite.next();
+            textSlite.next();
+        })
+
+        document.getElementById("prev").addEventListener("click",function (){
+            photoSlite.prev();
+            textSlite.prev();
+        })
+
+    </script>
+
+
+</body>
+</html>

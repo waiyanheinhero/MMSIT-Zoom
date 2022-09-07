@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1",
+    "counterup2": "^2.0.2",
+    "imagehover.css": "^2.0.0",
+    "sass": "^1.54.8",
+    "sweetalert2": "^11.4.30",
+    "typed.js": "^2.0.12",
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.2"
+  },
+  "name": "zoom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

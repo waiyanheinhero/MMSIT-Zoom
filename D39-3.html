@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./animate/node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="./bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 class="animate__animated animate__bounce">An animated element</h1>
+
+
+<div class="box m-5">
+    <input type="text" id="input" class=" form-control">
+    <ul id="list" class=" list-group"></ul>
+</div>
+
+<script>
+    let box = document.querySelector(".box");
+    let input = document.querySelector("#input");
+    let list = document.querySelector("#list");
+    // let fruits = ["apple","orange","mango","banana"];
+
+
+
+    // if(localStorage.getItem('list')){
+    //     console.log("i am list")
+    // }
+
+    // input.addEventListener("keydown",function(e){
+    //     if(e.keyCode == 13){
+    //         list.innerHTML += `<li class=" list-group-item animate__animated animate__bounce">${input.value}</li>`;
+    //         input.value = ""
+    //     }
+    // });
+
+    // for(fruit of fruits){
+    //     setTimeout(function(){
+    //         createList(fruit)
+    //     },1000)
+    // }
+
+    // fruits.forEach(function(i,index){
+    //     createList(i)
+    //     console.log(i,index)
+    // })
+
+    input.addEventListener("keydown",function(e){
+        if(e.keyCode == 13){
+            createList(input.value);
+            input.value = ""
+        }
+    });
+
+    function createList(x){
+        let li = document.createElement("li");
+        let text = document.createTextNode(x);
+        let btn = document.createElement("button");
+        let btnText = document.createTextNode("Delete");
+        btn.append(btnText);
+        btn.classList.add("btnDel","btn","btn-danger")
+        li.classList.add("list-group-item","animate__animated","animate__bounce","d-flex","justify-content-between");
+        li.append(text,btn);
+        list.append(li);
+
+    };
+
+    list.addEventListener("click",function(e){
+        if(e.target.classList.contains("btnDel")){
+            e.target.parentElement.remove()
+        }
+    })
+
+
+    localStorage.setItem("list",list.innerHTML);
+
+
+
+    // let x = 5;
+    // document.cookie = "username = Wai Yan Hein"
+    // document.cookie = "expires=Thu, 18 Dec 2013 12:00:00 UTC"
+
+    // localStorage.setItem("name","wyh");
+    // localStorage.setItem("age",26);
+    // localStorage.setItem("job","web Dev")
+
+
+
+
+</script>
+
+</body>
+</html>
+
