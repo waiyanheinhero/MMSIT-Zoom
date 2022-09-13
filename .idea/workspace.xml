@@ -11,7 +11,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MMS-Foody/Foody" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2ER2DmgQ9FXarrwtkjxS4En7inm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../At-Home/Swd-Work" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -38,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662543959326</updated>
       <workItem from="1662543961308" duration="924000" />
+      <workItem from="1662613317158" duration="22000" />
     </task>
     <servers />
   </component>
